@@ -1,0 +1,16 @@
+# Assignment number to concantenate to ASST
+assignNo=$1
+confPrefix="ASST"
+confName="${confPrefix}${assignNo}"
+
+echo Cleaning up ${confName}
+
+
+bmake clean
+cd kern/compile/${confName}
+bmake clean
+cd ../../..
+
+rm -rf kern/compile/${confName}
+
+

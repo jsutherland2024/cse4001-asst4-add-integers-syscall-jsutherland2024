@@ -1,0 +1,49 @@
+#!/usr/bin/expect -f
+
+
+set timeout 2
+
+
+# Start the OS/161 kernel with sys161
+cd /root/os161/root
+
+# Open the file for writing and direct future output to this file
+log_file -noappend output.txt
+    
+spawn sys161 kernel p testbin/test_add_integers
+
+# Send [ENTER]
+send -- "\r"
+
+# Send [ENTER]
+send -- "q\r"
+
+
+# Wait for some identifiable output that indicates the program has completed
+# This might be the program's specific output or a return to the command prompt
+# Adjust the following line according to your program's output or OS/161's behavior
+expect {
+    "s2=-1" {
+
+        # Handle successful completion if needed
+        puts "\n\nCorrect output.\n\n"
+        
+        # Close the log file
+        log_file
+        
+        exit 0
+    }
+    timeout {
+        # Handle timeout if the program does not complete in expected time
+        puts "Program execution timed out"
+        
+        # Close the log file
+        log_file
+        
+        exit 1
+    }
+}
+
+# Exit sys161 by sending the end-of-transmission character (Ctrl-D)
+send "\004"
+expect eof
