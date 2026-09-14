@@ -1,3 +1,20 @@
+# CSE4001 – Assignment 4
+
+**Name:** Jordan Sutherland  
+**NetID:** jsutherland2024
+
+## Description
+Brief description of the assignment.
+
+## Build Instructions
+...
+
+## Run Instructions
+...
+
+## Notes
+<img width="515" height="486" alt="image" src="https://github.com/user-attachments/assets/1e76795a-862d-4b76-a852-76ed8f0ba096" />
+
 # CSE4001 - Assignment 4: Add two more system calls to OS/161 💥
 
 
