@@ -161,3 +161,5 @@ char *getcwd(char *buf, size_t buflen);		/* calls __getcwd */
 time_t time(time_t *seconds);			/* calls __time */
 
 #endif /* _UNISTD_H_ */
+int add_two_integers(int a, int b);
+int print_int(const char *msg, int x);

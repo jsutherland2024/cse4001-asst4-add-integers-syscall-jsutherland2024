@@ -102,6 +102,8 @@
 //#define SYS_ptrace     44
 
 //                              -- File-handle-related --
+#define SYS_add_two_integers 43
+#define SYS_print_int    44
 #define SYS_open         45
 #define SYS_pipe         46
 #define SYS_dup          47

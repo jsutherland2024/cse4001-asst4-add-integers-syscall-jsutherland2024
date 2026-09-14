@@ -104,6 +104,14 @@ syscall(struct trapframe *tf)
 		err = sys_reboot(tf->tf_a0);
 		break;
 
+	    case SYS_add_two_integers:
+		err = sys_add_two_integers(tf->tf_a0, tf->tf_a1, &retval);
+		break;
+
+	    case SYS_print_int:
+		err = sys_print_int((const char *)tf->tf_a0, tf->tf_a1);
+		break;
+
 	    case SYS___time:
 		err = sys___time((userptr_t)tf->tf_a0,
 				 (userptr_t)tf->tf_a1);
@@ -131,8 +139,7 @@ syscall(struct trapframe *tf)
 		 * userlevel to a return value of -1 and the error
 		 * code in errno.
 		 */
-		tf->tf_v0 = err;
-		tf->tf_a3 = 1;      /* signal an error */
+	  ;      /* signal an error */
 	}
 	else {
 		/* Success. */
