@@ -4,13 +4,14 @@
 **NetID:** jsutherland2024
 
 ## Description
-Brief description of the assignment.
+add two integers, which adds two integers and shows the result
+print int prints, a message then an integer
 
 ## Build Instructions
-...
+./build_os161 4
 
 ## Run Instructions
-...
+after buidling you run /root/os161/toolbuild/sys161-2.0.8/build-sys161/sys161 kernel-ASST4 p testbin/test_add_integers
 
 ## Notes
 <img width="515" height="486" alt="image" src="https://github.com/user-attachments/assets/1e76795a-862d-4b76-a852-76ed8f0ba096" />
